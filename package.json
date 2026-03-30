@@ -1,8 +1,14 @@
 {
   "name": "@chumager/mongoose-sequence",
-  "version": "6.0.1",
+  "version": "6.1.0",
   "description": "Very generic autoincrement plugin for mongoose",
   "main": "index.js",
+  "exports": {
+    ".": {
+      "import": "./lib/sequence.mjs",
+      "require": "./index.js"
+    }
+  },
   "scripts": {
     "format": "prettier --write \".\"",
     "lint": "eslint . --fix",
@@ -32,7 +38,7 @@
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
-    "mongoose": ">=5"
+    "mongoose": ">=9"
   },
   "devDependencies": {
     "chai": "^4.3.10",
